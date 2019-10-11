@@ -35,10 +35,8 @@
 	<modules>
 		<module>openscoring-client</module>
 		<module>openscoring-common</module>
-		<module>openscoring-common-gwt</module>
 		<module>openscoring-server</module>
 		<module>openscoring-service</module>
-		<module>openscoring-webapp</module>
 	</modules>
 
 	<scm>
@@ -55,6 +53,12 @@
 	<properties>
 		<service.name>Openscoring</service.name>
 		<service.version>${project.version}</service.version>
+		<jpmml.version>1.4.13</jpmml.version>
+		<junit.version>4.12</junit.version>
+		<servlet-api.version>2.5</servlet-api.version>
+		<slf4j.version>1.7.25</slf4j.version>
+		<pmml-evaluator.version>1.4.11</pmml-evaluator.version>
+		<guava.version>27.0-jre</guava.version>
 	</properties>
 
 	<dependencyManagement>
@@ -67,11 +71,6 @@
 			<dependency>
 				<groupId>org.openscoring</groupId>
 				<artifactId>openscoring-common</artifactId>
-				<version>2.0-SNAPSHOT</version>
-			</dependency>
-			<dependency>
-				<groupId>org.openscoring</groupId>
-				<artifactId>openscoring-common-gwt</artifactId>
 				<version>2.0-SNAPSHOT</version>
 			</dependency>
 			<dependency>
@@ -112,7 +111,7 @@
 			<dependency>
 				<groupId>com.google.guava</groupId>
 				<artifactId>guava</artifactId>
-				<version>27.0-jre</version>
+				<version>${guava.version}</version>
 				<exclusions>
 					<exclusion>
 						<groupId>com.google.code.findbugs</groupId>
@@ -222,62 +221,62 @@
 			<dependency>
 				<groupId>org.jpmml</groupId>
 				<artifactId>pmml-evaluator</artifactId>
-				<version>1.4.11</version>
+				<version>${pmml-evaluator.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.jpmml</groupId>
 				<artifactId>pmml-evaluator-extension</artifactId>
-				<version>1.4.11</version>
+				<version>${pmml-evaluator.version}</version>
 			</dependency>
 
 			<dependency>
 				<groupId>org.jpmml</groupId>
 				<artifactId>pmml-model</artifactId>
-				<version>1.4.13</version>
+				<version>${jpmml.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.jpmml</groupId>
 				<artifactId>pmml-model-gwt</artifactId>
-				<version>1.4.13</version>
+				<version>${jpmml.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.jpmml</groupId>
 				<artifactId>pmml-model-jackson</artifactId>
-				<version>1.4.13</version>
+				<version>${jpmml.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.jpmml</groupId>
 				<artifactId>pmml-model-metro</artifactId>
-				<version>1.4.13</version>
+				<version>${jpmml.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.jpmml</groupId>
 				<artifactId>pmml-model-moxy</artifactId>
-				<version>1.4.13</version>
+				<version>${jpmml.version}</version>
 			</dependency>
 
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-api</artifactId>
-				<version>1.7.25</version>
+				<version>${slf4j.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-jdk14</artifactId>
-				<version>1.7.25</version>
+				<version>${slf4j.version}</version>
 			</dependency>
 
 			<dependency>
 				<groupId>javax.servlet</groupId>
 				<artifactId>servlet-api</artifactId>
-				<version>2.5</version>
+				<version>${servlet-api.version}</version>
 				<scope>provided</scope>
 			</dependency>
 
 			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
-				<version>4.12</version>
+				<version>${junit.version}</version>
 				<scope>test</scope>
 			</dependency>
 
